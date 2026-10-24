@@ -767,12 +767,3 @@ namespace
 
 KEEP_DRIVER(apatoreitn40);
 
-Uwaga: pozostawiłem dotychczasową logikę, ale są dwie rzeczy warte sprawdzenia przed kompilacją i testem:
-
-    W setDefaultFields() występują nazwy z końcówkami _hca i _c, podczas gdy pola rejestrowane przez addNumericField() mają nazwy bez tych końcówek. Zachowałem je tak, jak w przesłanym pliku.
-
-    Sterownik przyjmuje wyłącznie payload o długości 55 bajtów po obsłudze CI. Jeśli telegramy mają inną strukturę, funkcja zakończy pracę bez ustawienia wartości.
-
-Nie zmieniałem tych elementów, aby samo usunięcie logowania nie wpłynęło na dotychczasowe działanie dekodera.
-
-
